@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 io.on("connection", (socket) => {
   // Let us know when a user connects
   console.log("A user connected");
+  io.emit('user joined', "A new user has joined the chat!");
   // Let us know when a user disconnects
   socket.on("disconnect", () => {
     console.log("A user disconnected");
