@@ -21,6 +21,7 @@ io.on("connection", (socket) => {
   // Let us know when a user disconnects
   socket.on("disconnect", () => {
     console.log("A user disconnected");
+    io.emit('user disconnected', "A user has left the chat.");
   });
   // Let us know when a user sends a message
   socket.on('chat message', (msg) => {
