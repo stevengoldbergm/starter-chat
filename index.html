@@ -102,6 +102,8 @@
           input.value = "";
         }
       });
+      // Add in additional logic to notify when there is a name change
+
       // tutorial doesn't use arrow function for reasons. See if it fucks up
       socket.on("chat message", (msg) => {
         var item = document.createElement("li");
